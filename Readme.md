@@ -1,6 +1,10 @@
 """
 Install on heroku
 """
+1. commit
+2. heroku stack:set container
+3. push
+
 
 https://devcenter.heroku.com/articles/local-development-with-docker-compose#pushing-your-containers-to-heroku
 
