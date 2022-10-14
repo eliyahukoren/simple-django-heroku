@@ -39,3 +39,6 @@ https://www.youtube.com/watch?v=EIHY_CY5J0k
 docker tag main-backend:latest elik0ren/simple-flask-repo
 docker images
 docker push elik0ren/simple-flask-repo
+
+heroku run python manage.py shell
+heroku run bash
