@@ -1,6 +1,13 @@
-https://www.youtube.com/watch?v=Oy71OgKZbOQ
+# Deploy django app in docker image to the heroku
 
-Steps:
+
+
+Youtube link to [Deploy Django image to heroku](https://www.youtube.com/watch?v=Oy71OgKZbOQ)
+
+View app on the [web](https://eli-simple-django-app.herokuapp.com/)
+
+## Steps
+
 1. docker build -t django-mysite:v1 .
 2. docker run -p 8000:8000 django-mysite:v1
 3. docker tag django-mysite:v1 elik0ren/django-mysite
@@ -11,25 +18,21 @@ Steps:
 8. heroku container:release -a eli-simple-django-app web
 
 
-
-
-
-https://devcenter.heroku.com/articles/local-development-with-docker-compose#pushing-your-containers-to-heroku
-
-https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
-
-
-switch remote:
-git remote set-url heroku https://github.com/eliyahukoren/simple-django-heroku.git
-git remote set-url heroku https://git.heroku.com/eli-flask-simple-app.git
-
-How to switch deployment method from GitHub to Heroku Git with all the changes/app code available in a GitHub repo:
-https://help.heroku.com/CKVOUPSY/how-to-switch-deployment-method-from-github-to-heroku-git-with-all-the-changes-app-code-available-in-a-github-repo
-
-
-docker push youtube:
-https://www.youtube.com/watch?v=EIHY_CY5J0k
-
+>Helpers
+```
+git remote rename heroku origin
+git remote set-url origin https://github.com/eliyahukoren/simple-django-heroku.git
+git remote set-url origin https://git.heroku.com/eli-flask-simple-app.git
 docker tag django-mysite:v1 elik0ren/django-mysite
 docker images
 docker push elik0ren/django-mysite
+```
+
+
+heroku [doc](https://devcenter.heroku.com/articles/local-development-with-docker-compose#pushing-your-containers-to-heroku
+)
+
+heroku [doc](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml)
+
+
+Youtube [docker push](https://www.youtube.com/watch?v=EIHY_CY5J0k)
